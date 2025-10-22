@@ -1,0 +1,17 @@
+[
+  {
+    "sender": "john@example.com",
+    "subject": "Team Meeting Tomorrow",
+    "body": "Hello team, just a reminder we have a meeting scheduled for tomorrow at 10 AM. Please prepare your updates."
+  },
+  {
+    "sender": "finance@company.com",
+    "subject": "Invoice #12345",
+    "body": "Please find attached invoice #12345 for services provided last month. Payment is due within 15 days."
+  },
+  {
+    "sender": "support@company.com",
+    "subject": "Issue with Product",
+    "body": "I am experiencing an issue with the product I purchased. Can you help me resolve it?"
+  }
+]
