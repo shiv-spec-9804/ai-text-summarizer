@@ -11,7 +11,7 @@ function App() {
 
   const fetchSummaries = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/summaries");
+      const res = await axios.get("https://ai-text-summarizer-460l.onrender.com/summaries");
       // Ensure a stable, predictable order in the UI (newest first)
       // Backend does not guarantee ordering, so sort here by created_at.
       const sorted = Array.isArray(res.data)
