@@ -40,15 +40,21 @@ export async function summarizeEmail(body) {
     };
   }
 
-  // Fallback: e.g., "Invoice: The email contains billing details..."
-  match = content.match(/^(\w+):\s*([\s\S]*)/);
-  if (match) {
+  if(content.toLowerCase().includes("meeting")) {
+    console.log("Category: Meeting");
     return {
-      category: match[1].trim(),
-      summary_text: match[2].trim(),
+      category: "Meeting",
+      summary_text: content.trim(),
     };
   }
 
-  // Default
+  if (content.toLowerCase().includes("invoice")) {
+  console.log("Category: Invoice");
+   return {
+      category: "Invoice",
+      summary_text: content.trim(),
+    };
+}
+
   return { summary_text: content, category: "Uncategorized" };
 }

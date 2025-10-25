@@ -12,7 +12,12 @@ function App() {
   const fetchSummaries = async () => {
     try {
       const res = await axios.get("http://localhost:5000/summaries");
-      setSummaries(res.data);
+      // Ensure a stable, predictable order in the UI (newest first)
+      // Backend does not guarantee ordering, so sort here by created_at.
+      const sorted = Array.isArray(res.data)
+        ? res.data.slice().sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+        : res.data;
+      setSummaries(sorted);
     } catch (err) {
       console.error("Failed to fetch summaries:", err);
     }
