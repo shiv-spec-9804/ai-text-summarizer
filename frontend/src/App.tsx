@@ -24,17 +24,17 @@ function App() {
   };
 
   const deleteSummary = async (id: number) => {
-    await axios.delete(`http://localhost:5000/summaries/${id}`);
+    await axios.delete(`https://ai-text-summarizer-460l.onrender.com/summaries/${id}`);
     fetchSummaries();
   };
 
   const resummarize = async (id: number) => {
-    await axios.post(`http://localhost:5000/summaries/${id}/resummarize`);
+    await axios.post(`https://ai-text-summarizer-460l.onrender.com/summaries/${id}/resummarize`);
     fetchSummaries();
   };
 
   const summarizeEmails = async () => {
-    await axios.post("http://localhost:5000/summarize-emails");
+    await axios.post("https://ai-text-summarizer-460l.onrender.com/summarize-emails");
     fetchSummaries();
   };
 
