@@ -20,7 +20,7 @@ const SummaryActions: React.FC<Props> = ({ onSummarizeEmails }) => {
   };
 
   const downloadCSV = () => {
-    window.location.href = "http://localhost:5000/summaries/export";
+    window.location.href = "https://ai-text-summarizer-460l.onrender.com/summaries/export";
   };
 
   return (

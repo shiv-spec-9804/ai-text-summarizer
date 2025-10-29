@@ -9,6 +9,7 @@ function App() {
   const [summaries, setSummaries] = useState<Summary[]>([]);
   const [categoryFilter, setCategoryFilter] = useState("");
 
+
   const fetchSummaries = async () => {
     try {
       const res = await axios.get("https://ai-text-summarizer-460l.onrender.com/summaries");
